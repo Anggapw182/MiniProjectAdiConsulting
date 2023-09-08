@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "27320971-491e-422c-b332-0dd7e78258f2",
+		"name": "Test Adi Consulting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11820653"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7025/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7025",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Mr\",\r\n    \"FirstName\": \"George\",\r\n    \"LastName\": \"Costanza\",\r\n    \"Role\": \"User\",\r\n    \"Email\": \"george@costanza.com\",\r\n    \"Password\": \"george-likes-spicy-chicken\",\r\n    \"ConfirmPassword\": \"george-likes-spicy-chicken\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7025/Users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7025",
+					"path": [
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Art\",\r\n    \"lastName\": \"Vandelay\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7025/Users/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7025",
+					"path": [
+						"Users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Student Attendence",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"AnggaTest\",\r\n    \"attendencePercentage\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AttendanceService/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AttendanceService",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Attendence",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"AnggaUpdatet\",\r\n    \"attendencePercentage\": 90\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AttendanceService/UpdatebyID/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AttendanceService",
+						"UpdatebyID",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Student Attendence",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"AnggaUpdatet\",\r\n    \"attendencePercentage\": 90\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AttendanceService/delete/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AttendanceService",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Student Attendence",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AttendanceService",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AttendanceService"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student Attendence By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AttendanceService/GetbyID/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AttendanceService",
+						"GetbyID",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Student Addmision",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"AnggaTest\",\r\n    \"studentClass\": \"MIA-4\",\r\n    \"dateofJoining\": \"2023-09-06T02:04:29.559Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AdmissionService/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AdmissionService",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Addmision",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"Angga123\",\r\n    \"studentClass\": \"MIA-4\",\r\n    \"dateofJoining\": \"2023-09-06T02:04:29.559Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AdmissionService/UpdatebyID/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AdmissionService",
+						"UpdatebyID",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student Addmision",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"Angga123\",\r\n    \"studentClass\": \"MIA-4\",\r\n    \"dateofJoining\": \"2023-09-06T02:04:29.559Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AdmissionService/delete/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AdmissionService",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Student Addmission",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AdmissionService",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AdmissionService"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student Addmission BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7269/apigateway/AdmissionService/GetbyID/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7269",
+					"path": [
+						"apigateway",
+						"AdmissionService",
+						"GetbyID",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

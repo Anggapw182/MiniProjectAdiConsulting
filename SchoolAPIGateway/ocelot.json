@@ -1,0 +1,52 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/StudentAttendance/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7134
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/AttendanceService/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/api/StudentAttendance/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7134
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/AttendanceService/",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/StudentAdmission/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7025
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/AdmissionService/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/StudentAdmission/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7025
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/AdmissionService/",
+      "UpstreamHttpMethod": []
+    }
+  ]
+}
